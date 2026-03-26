@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [1.0.0] - 2026-03-26
 
+### Added
+
+- Unit tests for fileWriter (17 tests covering path traversal, cleanup, gitignore management)
+
 ### Changed
 
 - Gitignore management is now opt-in via `manageGitignore` setting (default off)

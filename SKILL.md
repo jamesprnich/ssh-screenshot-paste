@@ -25,8 +25,10 @@ Run all checks and collect results before presenting them. Do not stop at the fi
 | 4 | CHANGELOG has entry for current version | Parse `CHANGELOG.md` | Entry exists for the version in `package.json` |
 | 5 | package.json version matches latest CHANGELOG entry | Compare `package.json` `version` with the first `## [x.y.z]` in `CHANGELOG.md` | Match |
 | 6 | Icon exists | Check `resources/icon.png` | File exists |
-| 7 | .vscodeignore excludes dev files | Verify `src/`, `node_modules/`, `.git/` are in `.vscodeignore` | All present (note: `node_modules/` is excluded by vsce by default, but `src/` and `.git/` must be explicit) |
-| 8 | No secrets or dev files in VSIX | Run `npx vsce ls` and inspect output | Only expected files: `out/`, `resources/`, `package.json`, `README.md`, `CHANGELOG.md`, `LICENSE`. `SKILL.md` must NOT be included. |
+| 7 | .vscodeignore excludes dev files | Verify `src/`, `node_modules/`, `.git/`, `CLAUDE.md` are in `.vscodeignore` | All present (note: `node_modules/` is excluded by vsce by default, but `src/` and `.git/` must be explicit) |
+| 8 | No secrets or dev files in VSIX | Run `npx vsce ls` and inspect output | Only expected files: `out/`, `resources/`, `package.json`, `README.md`, `CHANGELOG.md`, `LICENSE`. `SKILL.md` and `CLAUDE.md` must NOT be included. |
+| 9 | CHANGELOG covers all changes | Run `git diff` (or `git log` since last tag) and compare against the CHANGELOG entry for the current version. Every user-facing change (new features, behaviour changes, removed features, new settings, icon changes) must be mentioned. Internal-only changes (refactors, test additions, CI tweaks, dev tooling) should also be listed if notable. | All changes accounted for — flag any that are missing and do not proceed until resolved |
+| 10 | No stale version strings | Grep the repo for the previous version string, excluding `node_modules/`, `CHANGELOG.md`, and `*.vsix`. | No matches found. If any file still references the old version, flag it — it likely needs updating. |
 
 **Present results** as a checklist:
 

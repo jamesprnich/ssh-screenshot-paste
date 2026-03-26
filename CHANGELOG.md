@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 - Gitignore management is now opt-in via `manageGitignore` setting (default off)
 - Extension no longer marked as preview
+- New extension icon (SSH shield design)
 - Updated README with "Why this extension?" positioning section
 
 ## [0.1.1] - 2026-03-09

@@ -1,0 +1,13 @@
+<svg width="256" height="256" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="20" fill="#1a1a2e"/>
+  <!-- Shield shape -->
+  <path d="M64,14 L104,30 L104,70 Q104,100 64,114 Q24,100 24,70 L24,30 Z" fill="#0f172a" stroke="#22c55e" stroke-width="2.5"/>
+  <!-- Image icon top -->
+  <rect x="42" y="34" width="44" height="30" rx="4" fill="#3b82f6"/>
+  <polygon points="46,60 62,44 82,60" fill="#60a5fa"/>
+  <circle cx="74" cy="42" r="4" fill="#fbbf24"/>
+  <!-- Terminal prompt bottom -->
+  <text x="44" y="86" font-family="monospace" font-size="20" font-weight="bold" fill="#22c55e">&gt;_</text>
+  <!-- SSH label -->
+  <text x="64" y="102" font-family="monospace" font-size="10" font-weight="bold" fill="#94a3b8" text-anchor="middle">SSH</text>
+</svg>

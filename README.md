@@ -9,9 +9,7 @@ Cmd+V screenshots from your Mac clipboard into remote SSH terminals. Everywhere 
 
 ## Why this extension?
 
-There are several extensions that paste images into VS Code terminals. They all require a separate keyboard shortcut — Ctrl+Alt+V, Alt+I, or similar. That means you have to remember which shortcut to use and when.
-
-This extension just uses **Cmd+V**. It only activates when you're in a remote SSH terminal with an image on your clipboard — everywhere else, Cmd+V works exactly as it always does. Paste in your editor, paste in a local terminal, paste text into a remote terminal — all normal. The only time the extension steps in is the one moment you actually need it. Nothing to remember, nothing to configure.
+This extension just uses **Cmd+V**. It only activates when you're in a remote SSH terminal with an image on your clipboard — everywhere else, Cmd+V works exactly as it always does. Paste in your editor, paste in a local terminal, paste text into a remote terminal — all normal. The only time the extension steps in is the one moment you actually need it. Nothing to remember, nothing to configure. Unlike other extensions that require a separate keyboard shortcut like Ctrl+Alt+V or Alt+I, there's nothing new to learn.
 
 ## How it works
 

@@ -1,9 +1,17 @@
 # SSH Screenshot Paste
 
-Cmd+V screenshots from your Mac clipboard into VS Code remote terminals. The image is saved to the remote host and the file path is typed into the terminal — ready for Claude Code or any other tool.
+The original native Cmd+V screenshot extension for VS Code Remote-SSH.
+
+Cmd+V screenshots from your Mac clipboard into remote SSH terminals. Everywhere else, paste works exactly as it always does — the extension only activates when you need it.
 
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/jamesprnich.ssh-screenshot-paste)](https://marketplace.visualstudio.com/items?itemName=jamesprnich.ssh-screenshot-paste)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/jamesprnich.ssh-screenshot-paste)](https://marketplace.visualstudio.com/items?itemName=jamesprnich.ssh-screenshot-paste)
+
+## Why this extension?
+
+There are several extensions that paste images into VS Code terminals. They all require a separate keyboard shortcut — Ctrl+Alt+V, Alt+I, or similar. That means you have to remember which shortcut to use and when.
+
+This extension just uses **Cmd+V**. It only activates when you're in a remote SSH terminal with an image on your clipboard — everywhere else, Cmd+V works exactly as it always does. Paste in your editor, paste in a local terminal, paste text into a remote terminal — all normal. The only time the extension steps in is the one moment you actually need it. Nothing to remember, nothing to configure.
 
 ## How it works
 
@@ -37,7 +45,7 @@ brew install pngpaste
 
 - **Transparent Cmd+V** — no new shortcuts to learn, just paste as normal
 - **Remote-first** — files are saved on the remote host, not locally
-- **Auto git exclusion** — `.vscode-screenshots/` is added to `.gitignore` automatically
+- **Optional git exclusion** — automatically add `.vscode-screenshots/` to `.gitignore` (opt-in via settings)
 - **Auto cleanup** — screenshots older than 30 days are deleted (configurable)
 - **Non-intrusive** — only activates in remote SSH terminals with an image on the clipboard. Local terminals, text paste, and non-remote sessions are completely unaffected
 - **Zero config** — works out of the box, settings are optional
@@ -48,6 +56,7 @@ brew install pngpaste
 |---|---|---|
 | `terminalScreenshotPaste.screenshotDir` | `.vscode-screenshots` | Directory name in the workspace root for saving screenshots |
 | `terminalScreenshotPaste.retentionDays` | `30` | Delete screenshots older than this many days. Set to 0 to keep forever. |
+| `terminalScreenshotPaste.manageGitignore` | `false` | Auto-add screenshot directory to `.gitignore` |
 
 ## Troubleshooting
 

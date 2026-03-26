@@ -55,7 +55,9 @@ export async function saveToRemote(
   await vscode.workspace.fs.writeFile(fileUri, imageData);
 
   // Ensure .gitignore excludes the screenshot directory
-  await ensureGitignore(folder, screenshotDir, log);
+  if (config.get<boolean>("manageGitignore", false)) {
+    await ensureGitignore(folder, screenshotDir, log);
+  }
 
   // Clean up old screenshots in the background
   cleanupOldScreenshots(folder, screenshotDir, log).catch(() => {});

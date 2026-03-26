@@ -2,7 +2,7 @@
   "name": "ssh-screenshot-paste",
   "displayName": "SSH Screenshot Paste",
   "description": "Cmd+V screenshots from your Mac clipboard into VS Code remote terminals. Saves the image to the remote host and types the file path.",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "publisher": "jamesprnich",
   "license": "MIT",
   "icon": "resources/icon.png",
@@ -28,7 +28,6 @@
     "color": "#1a1a2e",
     "theme": "dark"
   },
-  "preview": true,
   "qna": false,
   "engines": {
     "vscode": "^1.80.0"
@@ -68,6 +67,11 @@
           "default": 30,
           "minimum": 0,
           "description": "Delete screenshots older than this many days. Set to 0 to keep forever."
+        },
+        "terminalScreenshotPaste.manageGitignore": {
+          "type": "boolean",
+          "default": false,
+          "description": "Auto-add screenshot directory to .gitignore"
         }
       }
     }

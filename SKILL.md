@@ -29,6 +29,7 @@ Run all checks and collect results before presenting them. Do not stop at the fi
 | 8 | No secrets or dev files in VSIX | Run `npx vsce ls` and inspect output | Only expected files: `out/`, `resources/`, `package.json`, `README.md`, `CHANGELOG.md`, `LICENSE`. `SKILL.md` and `CLAUDE.md` must NOT be included. |
 | 9 | CHANGELOG covers all changes | Run `git diff` (or `git log` since last tag) and compare against the CHANGELOG entry for the current version. Every user-facing change (new features, behaviour changes, removed features, new settings, icon changes) must be mentioned. Internal-only changes (refactors, test additions, CI tweaks, dev tooling) should also be listed if notable. | All changes accounted for — flag any that are missing and do not proceed until resolved |
 | 10 | No stale version strings | Grep the repo for the previous version string, excluding `node_modules/`, `CHANGELOG.md`, and `*.vsix`. | No matches found. If any file still references the old version, flag it — it likely needs updating. |
+| 11 | Version not already published | Run `git tag -l v$(node -p "require('./package.json').version")` | No output — tag does not exist. If the tag already exists, the current version has been published and must be bumped before proceeding. |
 
 **Present results** as a checklist:
 

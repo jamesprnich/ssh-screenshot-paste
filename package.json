@@ -2,7 +2,7 @@
   "name": "ssh-screenshot-paste",
   "displayName": "SSH Screenshot Paste",
   "description": "Cmd+V screenshots from your Mac clipboard into VS Code remote terminals. Saves the image to the remote host and types the file path.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "jamesprnich",
   "license": "MIT",
   "icon": "resources/icon.png",
